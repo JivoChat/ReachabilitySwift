@@ -1,27 +1,26 @@
-Pod::Spec.new do |s|
-  s.name         = 'ReachabilitySwift'
-  s.version      = '5.2.4'
-  s.module_name = 'Reachability'
-  s.homepage     = 'https://github.com/ashleymills/Reachability.swift'
-  s.authors      = {
+Pod::Spec.new do |spec|
+  spec.name         = 'ReachabilitySwift'
+  spec.version      = '6.0.0'
+  spec.module_name = 'Reachability'
+  spec.homepage     = 'https://github.com/ashleymills/Reachability.swift'
+  spec.authors      = {
     'Ashley Mills' => 'ashleymills@mac.com'
   }
-  s.summary      = 'Replacement for Apple\'s Reachability re-written in Swift with callbacks.'
-  s.license      = { :type => 'MIT' }
+  spec.summary      = 'Replacement for Apple\'s Reachability re-written in Swift with callbacks.'
+  spec.license      = { :type => 'MIT' }
 
 # Source Info
-  s.ios.deployment_target = "12.0"
-  s.osx.deployment_target = "10.13"
-  s.tvos.deployment_target  = "9.0"
-  s.source       =  {
-    :git => 'https://github.com/ashleymills/Reachability.swift.git',
-    :tag => 'v'+s.version.to_s
+  spec.ios.deployment_target = "12.0"
+  spec.osx.deployment_target = "10.13"
+  spec.source       =  {
+    :git => 'https://github.com/JivoChat/ReachabilitySwift.git',
+    :tag => "v#{spec.version}"
   }
-  s.source_files = 'Sources/Reachability.swift'
-  s.resource_bundles = {"ReachabilitySwift" => ["Sources/PrivacyInfo.xcprivacy"]}
-  s.framework    = 'SystemConfiguration'
-  s.ios.framework    = 'CoreTelephony'
+  spec.source_files = 'Sources/Reachability.swift'
+  spec.resource_bundles = {"ReachabilitySwift" => ["Sources/PrivacyInfo.xcprivacy"]}
+  spec.framework    = 'SystemConfiguration'
+  spec.ios.framework    = 'CoreTelephony'
 
-  s.requires_arc = true
-  s.swift_version = '5.0'
+  spec.requires_arc = true
+  spec.swift_version = '5.0'
 end
